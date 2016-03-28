@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.70"
+        android:background="#FF5722">
+
+        <!-- image View -->
+        <!-- scaleType -> centerCrop keep aspect ratio of image as well as center Image in view -->
+
+        <ImageView
+            android:layout_width="300dp"
+            android:layout_height="250dp"
+            android:id="@+id/image"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.30"
+        android:background="#212121">
+
+        <!-- Text Views For Weather Info -->
+        <!-- remove visibility line to show text as well as comment out other text views -->
+        <!-- center_horizontal center the text in parent horizontally only -->
+
+        <TextView
+            android:id="@+id/error"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:visibility="gone"
+            android:textSize="20sp"
+            android:textColor="#FF5722"
+            android:text="I'm sorry.\nI wasn't able to retrieve real time data." />
+
+        <TextView
+            android:id="@+id/degrees"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textSize="90sp"
+            android:textColor="#FF5722"
+            android:text="-36°"/>
+
+        <TextView
+            android:id="@+id/weather"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/degrees"
+            android:textSize="30sp"
+            android:gravity="center"
+            android:textColor="#FF5722"
+            android:text="Sunny" />
+
+    </RelativeLayout>
+
+</LinearLayout>
